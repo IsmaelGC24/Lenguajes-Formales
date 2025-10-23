@@ -1,10 +1,18 @@
-DFA Minimization Algorithm
-Student Information
+# DFA Minimization Algorithm
+
+## Project Description
+This project implements the DFA minimization algorithm based on Kozen's approach from "Automata and Computability". The program identifies equivalent states in a Deterministic Finite Automaton that can be collapsed to produce a minimal automaton.
+
+The algorithm works by marking state pairs that are distinguishable through a process of iterative refinement, ultimately identifying which states behave identically for all input strings.
+
+## Students Information
+
 Full Name: Ismael García Ceballos - Santiago Arellano López
 
 Class Number: 5730
 
-Environment Specifications
+## Environment Specifications
+
 Operating System: Windows 10/11
 
 Programming Language: C++ (C++11 standard or higher)
@@ -15,24 +23,29 @@ Terminal: PowerShell or Command Prompt
 
 Development Tools: Visual Studio Code or Visual Studio
 
-Implementation Instructions
-Prerequisites
+## Implementation Instructions
+
+## Prerequisites
 Ensure you have a C++ compiler installed (g++ from MinGW recommended)
 
 Create an input file named input.txt in the same directory as the executable
 
-Compilation
+## Compilation
+
 Open your terminal and navigate to the project directory, then run:
 
-g++ main.cpp -o dfa_minimizer
-Execution
+* g++ main.cpp -o dfa_minimizer
+
+## Execution
 Using PowerShell:
 
-Get-Content input.txt | .\dfa_minimizer.exe
-Using Command Prompt (traditional):
+* Get-Content input.txt | .\dfa_minimizer.exe
 
-dfa_minimizer.exe < input.txt
-Input File Format
+## Using Command Prompt (traditional):
+
+*dfa_minimizer.exe < input.txt
+
+## Input File Format
 The input file must follow this exact structure:
 
 1               # Number of test cases
@@ -46,27 +59,30 @@ a b             # Alphabet symbols (space-separated)
 4 5 5
 5 5 5
 
-Expected Output
+## Expected Output
+
 The program outputs equivalent state pairs in lexicographical order on a single line:
 
 (2,3)
-Algorithm Explanation
+
+# Algorithm Explanation
+
 This implementation follows the DFA minimization algorithm from Kozen's "Automata and Computability" (Lecture 14). The algorithm identifies equivalent states that can be collapsed to produce a minimal DFA.
 
-Algorithm Steps
+## Algorithm Steps
 Initialization Phase
 
 Create a table of all unordered state pairs {p,q} where p < q
 
 Initialize all pairs as unmarked
 
-Base Case Marking
+## Base Case Marking
 
 Mark any pair {p,q} where one state is final and the other is non-final
 
 These pairs are clearly non-equivalent since they differ on the empty string ε
 
-Recursive Marking
+## Recursive Marking
 
 Repeatedly scan unmarked pairs {p,q}
 
@@ -76,23 +92,18 @@ If such a symbol exists, mark {p,q} as non-equivalent
 
 Continue until no new pairs can be marked in a complete pass
 
-Equivalent State Identification
+## Equivalent State Identification
 
 After stabilization, unmarked pairs represent equivalent states
 
 These states can be merged in the minimized automaton
 
-Complexity Analysis
-Time Complexity: O(n² × |Σ|) where n is the number of states and |Σ| is the alphabet size
-
-Space Complexity: O(n²) for storing the marking table
-
-Key Properties
+## Key Properties
 The algorithm correctly identifies all equivalent state pairs
 
 The resulting DFA is minimal and unique up to isomorphism
 
 All inaccessible states are assumed to be removed prior to minimization (as per assignment requirements)
 
-References
+## References
 Kozen, D. C. (1997). Automata and Computability. Springer-Verlag. ISBN: 0387949070
