@@ -1,0 +1,21 @@
+# VS Code
+.vscode/
+*.code-workspace
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+debug/
+release/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
