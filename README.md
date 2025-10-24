@@ -8,9 +8,11 @@ This repository contains two implementations for Formal Languages and Compilers 
 
 ## Students Information
 Full Names: Ismael García Ceballos - Santiago Arellano López
+
 Class Number: 5730
 
 ## Environment Specifications
+
 Operating System: Windows 10/11
 
 Programming Language: C++ (C++11 standard or higher)
@@ -22,8 +24,11 @@ Terminal: PowerShell or Command Prompt
 Development Tools: Visual Studio Code or Visual Studio
 
 # Assignment 1: DFA Minimization Algorithm
+
 ## Implementation Instructions
+
 Prerequisites
+
 Ensure you have a C++ compiler installed (g++ from MinGW recommended)
 
 Create an input file named input.txt in the same directory as the executable
@@ -142,7 +147,7 @@ This implementation follows Algorithm 4.19 from Aho et al.'s "Compilers: Princip
 
 ## Algorithm Steps
 
-Input Assumptions:
+## Input Assumptions:
 
 Grammar has no cycles (A ⟹⁺ A)
 
